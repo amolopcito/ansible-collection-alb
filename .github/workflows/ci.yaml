@@ -151,4 +151,3 @@ jobs:
     - name: Run unit tests
       run: ansible-test units --docker -v --color --truncate 0 --python 3.8 --coverage
       working-directory: /home/runner/.ansible/collections/ansible_collections/vmware/alb
-
