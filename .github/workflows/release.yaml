@@ -1,8 +1,7 @@
 name: Deploy collection to Ansible Galaxy
 on:
-  create:
-    tags:
-      - "tag-*"
+  release:
+    types: [created]
 jobs:
   deploy:
     runs-on: ubuntu-latest
