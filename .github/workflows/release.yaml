@@ -1,47 +1,22 @@
-name: Publish Collection to Repository
-# Controls when the action will run.
+name: Deploy collection to Ansible Galaxy
 on:
-  release:
-    types: [created]
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+  create:
+    tags:
+      - "tag-*"
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  deploy:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-
-      # Sets up python3
-      - uses: actions/setup-python@v2
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
         with:
           python-version: 3.8
-
-      - name: Get current version
-        id: cversion
-        run: echo "::set-output name=version::$(grep version home/runner/.ansible/collections/ansible_collections/vmware/alb/galaxy.yml | awk -F'"' '{ print $2 }')"
-
-      - name: Set up Galaxy auth
-        run: |
-          mkdir -p ~/.ansible
-          echo "token: $GALAXY_API_KEY" > ~/.ansible/galaxy_token
-        env:
-          GALAXY_API_KEY: ${{ secrets.GALAXY_API_KEY }}
-        shell: bash
-
-      - name: update release
-        id: update_release
-        uses: tubone24/update_release@v1.0
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-
-      - name: Upload ansible collection
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.github_token }}
+      - name: Install ansible-base to deploy collection
+        run: pip install ansible-base
+      - name: Build and Deploy Collection
+        uses: artis3n/ansible_galaxy_collection@v2
         with:
-          upload_url: ${{ steps.update_release.outputs.upload_url }}
-          asset_path: avi_ansible-collection-alb-${{ steps.cversion.outputs.version }}.tar.gz
-          asset_name: ansible-collection-alb-${{ steps.cversion.outputs.version }}
-          asset_content_type: application/gzip
+          api_key: "${{ secrets.GALAXY_API_KEY }}"
+
