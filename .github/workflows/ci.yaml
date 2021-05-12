@@ -60,10 +60,10 @@ jobs:
         run: sudo mkdir -p /etc/galaxy-importer
 
       - name: Create galaxy-importer.cfg
-        run: sudo cp /home/runner/.ansible/collections/ansible_collections/vmware/alb/.github/workflows/galaxy-importer.cfg /etc/galaxy-importer/galaxy-importer.cfg
+        run: sudo cp /home/runner/.ansible/collections/ansible_collections/amolopcito/alb/.github/workflows/galaxy-importer.cfg /etc/galaxy-importer/galaxy-importer.cfg
 
       - name: Run galaxy-importer check
-        run: python -m galaxy_importer.main .cache/collection-tarballs/vmware-*.tar.gz | tee .cache/collection-tarballs/log.txt && sudo cp ./importer_result.json .cache/collection-tarballs/importer_result.json
+        run: python -m galaxy_importer.main .cache/collection-tarballs/amolopcito-*.tar.gz | tee .cache/collection-tarballs/log.txt && sudo cp ./importer_result.json .cache/collection-tarballs/importer_result.json
 
 #      - name: Check warnings and errors
 #        run: if grep -E 'WARNING|ERROR' .cache/collection-tarballs/log.txt; then exit 1; else exit 0; fi
@@ -105,19 +105,19 @@ jobs:
 
     - name: Run sanity tests
       run: ansible-test sanity --test validate-modules --docker -v --color --truncate 0 --coverage --python 3.8
-      working-directory: /home/runner/.ansible/collections/ansible_collections/vmware/alb
+      working-directory: /home/runner/.ansible/collections/ansible_collections/amolopcito/alb
 
     - name: Run sanity tests
       run: ansible-test sanity --test yamllint --docker -v --color --truncate 0 --coverage --python 3.8
-      working-directory: /home/runner/.ansible/collections/ansible_collections/vmware/alb
+      working-directory: /home/runner/.ansible/collections/ansible_collections/amolopcito/alb
 
     - name: Run sanity tests
       run: ansible-test sanity --test ansible-doc --docker -v --color --truncate 0 --coverage --python 3.8
-      working-directory: /home/runner/.ansible/collections/ansible_collections/vmware/alb
+      working-directory: /home/runner/.ansible/collections/ansible_collections/amolopcito/alb
 
     - name: Run sanity tests
       run: ansible-test sanity --test compile --docker -v --color --truncate 0 --coverage --python 3.8
-      working-directory: /home/runner/.ansible/collections/ansible_collections/vmware/alb
+      working-directory: /home/runner/.ansible/collections/ansible_collections/amolopcito/alb
 
   units:
     name: Units in ubuntu-latest
@@ -150,4 +150,4 @@ jobs:
 
     - name: Run unit tests
       run: ansible-test units --docker -v --color --truncate 0 --python 3.8 --coverage
-      working-directory: /home/runner/.ansible/collections/ansible_collections/vmware/alb
+      working-directory: /home/runner/.ansible/collections/ansible_collections/amolopcito/alb
