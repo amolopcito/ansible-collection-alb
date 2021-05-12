@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_botmapping
+amolopcito.alb.avi_botmapping
 *****************************
 
 **Module for setup of BotMapping Avi RESTful Object**
@@ -218,7 +218,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create BotMapping object
           avi_botmapping:

@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_nsxtsegmentruntime
+amolopcito.alb.avi_nsxtsegmentruntime
 *****************************
 
 **Module for setup of NsxtSegmentRuntime Avi RESTful Object**
@@ -521,7 +521,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create NsxtSegmentRuntime object
           avi_nsxtsegmentruntime:

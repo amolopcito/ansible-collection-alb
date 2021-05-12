@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_prioritylabels
+amolopcito.alb.avi_prioritylabels
 *****************************
 
 **Module for setup of PriorityLabels Avi RESTful Object**
@@ -300,7 +300,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create PriorityLabels object
           avi_prioritylabels:

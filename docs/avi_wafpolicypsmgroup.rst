@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_wafpolicypsmgroup
+amolopcito.alb.avi_wafpolicypsmgroup
 *****************************
 
 **Module for setup of WafPolicyPSMGroup Avi RESTful Object**
@@ -411,7 +411,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create WafPolicyPSMGroup object
           avi_wafpolicypsmgroup:

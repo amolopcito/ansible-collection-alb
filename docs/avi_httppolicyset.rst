@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_httppolicyset
+amolopcito.alb.avi_httppolicyset
 *****************************
 
 **Module for setup of HTTPPolicySet Avi RESTful Object**
@@ -419,7 +419,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
         - name: Create a HTTP Policy set two switch between testpool1 and testpool2
           avi_httppolicyset:

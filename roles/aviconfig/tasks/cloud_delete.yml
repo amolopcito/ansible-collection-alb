@@ -17,7 +17,7 @@
 
 - name: Avi Cloud | Delete Cloud
   no_log: "{{ avi_role_config_log_mode | default(False)}}"
-  vmware.alb.avi_cloud:
+  amolopcito.alb.avi_cloud:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

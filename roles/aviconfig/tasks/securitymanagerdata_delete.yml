@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi SecurityManagerData | Delete SecurityManagerData
-  vmware.alb.avi_securitymanagerdata:
+  amolopcito.alb.avi_securitymanagerdata:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

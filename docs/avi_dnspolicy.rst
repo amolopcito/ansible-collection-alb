@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_dnspolicy
+amolopcito.alb.avi_dnspolicy
 *****************************
 
 **Module for setup of DnsPolicy Avi RESTful Object**
@@ -338,7 +338,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create DnsPolicy object
           avi_dnspolicy:

@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_sslprofile
+amolopcito.alb.avi_sslprofile
 *****************************
 
 **Module for setup of SSLProfile Avi RESTful Object**
@@ -631,7 +631,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create SSL profile with list of allowed ciphers
             avi_sslprofile:

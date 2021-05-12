@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_authprofile
+amolopcito.alb.avi_authprofile
 *****************************
 
 **Module for setup of AuthProfile Avi RESTful Object**
@@ -359,7 +359,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create user authorization profile based on the LDAP
             avi_authprofile:

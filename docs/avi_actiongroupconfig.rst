@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_actiongroupconfig
+amolopcito.alb.avi_actiongroupconfig
 *****************************
 
 **Module for setup of ActionGroupConfig Avi RESTful Object**
@@ -372,7 +372,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create ActionGroupConfig object
           avi_actiongroupconfig:

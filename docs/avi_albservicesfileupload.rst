@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_albservicesfileupload
+amolopcito.alb.avi_albservicesfileupload
 *****************************
 
 **Module for setup of ALBServicesFileUpload Avi RESTful Object**
@@ -295,7 +295,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create ALBServicesFileUpload object
           avi_albservicesfileupload:

@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi VSDataScriptSet | Create or Update VSDataScriptSet
-  vmware.alb.avi_vsdatascriptset:
+  amolopcito.alb.avi_vsdatascriptset:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

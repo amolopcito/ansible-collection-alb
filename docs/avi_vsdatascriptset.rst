@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_vsdatascriptset
+amolopcito.alb.avi_vsdatascriptset
 *****************************
 
 **Module for setup of VSDataScriptSet Avi RESTful Object**
@@ -481,7 +481,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create VSDataScriptSet object
           avi_vsdatascriptset:

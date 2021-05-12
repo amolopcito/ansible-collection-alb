@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_wafprofile
+amolopcito.alb.avi_wafprofile
 *****************************
 
 **Module for setup of WafProfile Avi RESTful Object**
@@ -315,7 +315,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create WafProfile object
           avi_wafprofile:

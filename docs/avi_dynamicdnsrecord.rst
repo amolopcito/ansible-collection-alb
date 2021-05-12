@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_dynamicdnsrecord
+amolopcito.alb.avi_dynamicdnsrecord
 *****************************
 
 **Module for setup of DynamicDnsRecord Avi RESTful Object**
@@ -592,7 +592,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create DynamicDnsRecord object
           avi_dynamicdnsrecord:

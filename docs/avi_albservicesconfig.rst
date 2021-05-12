@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_albservicesconfig
+amolopcito.alb.avi_albservicesconfig
 *****************************
 
 **Module for setup of ALBServicesConfig Avi RESTful Object**
@@ -428,7 +428,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create ALBServicesConfig object
           avi_albservicesconfig:

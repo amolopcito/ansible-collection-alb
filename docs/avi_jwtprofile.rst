@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_jwtprofile
+amolopcito.alb.avi_jwtprofile
 *****************************
 
 **Module for setup of JWTProfile Avi RESTful Object**
@@ -279,7 +279,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create JWTProfile object
           avi_jwtprofile:

@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_microservicegroup
+amolopcito.alb.avi_microservicegroup
 *****************************
 
 **Module for setup of MicroServiceGroup Avi RESTful Object**
@@ -253,7 +253,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create a Microservice Group that can be used for setting up Network security policy
             avi_microservicegroup:

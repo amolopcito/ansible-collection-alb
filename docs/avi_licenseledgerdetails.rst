@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_licenseledgerdetails
+amolopcito.alb.avi_licenseledgerdetails
 *****************************
 
 **Module for setup of LicenseLedgerDetails Avi RESTful Object**
@@ -206,7 +206,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create LicenseLedgerDetails object
           avi_licenseledgerdetails:

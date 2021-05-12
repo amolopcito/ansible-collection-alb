@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi BotConfigConsolidator | Create or Update BotConfigConsolidator
-  vmware.alb.avi_botconfigconsolidator:
+  amolopcito.alb.avi_botconfigconsolidator:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

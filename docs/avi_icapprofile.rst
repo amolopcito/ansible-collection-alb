@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_icapprofile
+amolopcito.alb.avi_icapprofile
 *****************************
 
 **Module for setup of IcapProfile Avi RESTful Object**
@@ -609,7 +609,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create IcapProfile object
           avi_icapprofile:

@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_vsvip
+amolopcito.alb.avi_vsvip
 *****************************
 
 **Module for setup of VsVip Avi RESTful Object**
@@ -493,7 +493,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
         - name: Create vsvip for virtualservice for newtestvs
           avi_vsvip:

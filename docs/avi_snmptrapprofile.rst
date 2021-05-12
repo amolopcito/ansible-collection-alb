@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_snmptrapprofile
+amolopcito.alb.avi_snmptrapprofile
 *****************************
 
 **Module for setup of SnmpTrapProfile Avi RESTful Object**
@@ -217,7 +217,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create SnmpTrapProfile object
           avi_snmptrapprofile:

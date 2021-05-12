@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_cloud
+amolopcito.alb.avi_cloud
 *****************************
 
 **Module for setup of Cloud Avi RESTful Object**
@@ -1010,7 +1010,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create a VMWare cloud with write access mode
             avi_cloud:

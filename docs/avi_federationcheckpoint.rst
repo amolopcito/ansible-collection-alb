@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_federationcheckpoint
+amolopcito.alb.avi_federationcheckpoint
 *****************************
 
 **Module for setup of FederationCheckpoint Avi RESTful Object**
@@ -281,7 +281,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create FederationCheckpoint object
           avi_federationcheckpoint:

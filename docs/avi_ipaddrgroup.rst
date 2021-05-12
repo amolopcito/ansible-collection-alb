@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_ipaddrgroup
+amolopcito.alb.avi_ipaddrgroup
 *****************************
 
 **Module for setup of IpAddrGroup Avi RESTful Object**
@@ -407,7 +407,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create an IP Address Group configuration
             avi_ipaddrgroup:

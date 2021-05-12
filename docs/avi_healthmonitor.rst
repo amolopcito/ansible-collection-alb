@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_healthmonitor
+amolopcito.alb.avi_healthmonitor
 *****************************
 
 **Module for setup of HealthMonitor Avi RESTful Object**
@@ -785,7 +785,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
         - name: Create a HTTPS health monitor
           avi_healthmonitor:

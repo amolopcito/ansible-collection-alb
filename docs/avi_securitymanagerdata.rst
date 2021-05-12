@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_securitymanagerdata
+amolopcito.alb.avi_securitymanagerdata
 *****************************
 
 **Module for setup of SecurityManagerData Avi RESTful Object**
@@ -209,7 +209,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create SecurityManagerData object
           avi_securitymanagerdata:

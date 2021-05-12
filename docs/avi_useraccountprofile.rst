@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_useraccountprofile
+amolopcito.alb.avi_useraccountprofile
 *****************************
 
 **Module for setup of UserAccountProfile Avi RESTful Object**
@@ -310,7 +310,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create UserAccountProfile object
           avi_useraccountprofile:

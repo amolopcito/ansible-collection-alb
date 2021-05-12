@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_siteversion
+amolopcito.alb.avi_siteversion
 *****************************
 
 **Module for setup of SiteVersion Avi RESTful Object**
@@ -381,7 +381,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create SiteVersion object
           avi_siteversion:

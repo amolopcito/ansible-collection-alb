@@ -5,7 +5,7 @@
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
 
-from ansible_collections.vmware.alb.plugins.module_utils.utils.ansible_utils import (avi_obj_cmp, ref_n_str_cmp)
+from ansible_collections.amolopcito.alb.plugins.module_utils.utils.ansible_utils import (avi_obj_cmp, ref_n_str_cmp)
 
 new_obj = {
         "name": "testpool1",

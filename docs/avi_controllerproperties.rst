@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_controllerproperties
+amolopcito.alb.avi_controllerproperties
 *****************************
 
 **Module for setup of ControllerProperties Avi RESTful Object**
@@ -2098,7 +2098,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create ControllerProperties object
           avi_controllerproperties:

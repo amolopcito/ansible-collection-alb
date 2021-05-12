@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_trafficcloneprofile
+amolopcito.alb.avi_trafficcloneprofile
 *****************************
 
 **Module for setup of TrafficCloneProfile Avi RESTful Object**
@@ -321,7 +321,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create TrafficCloneProfile object
           avi_trafficcloneprofile:

@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_cloudproperties
+amolopcito.alb.avi_cloudproperties
 *****************************
 
 **Module for setup of CloudProperties Avi RESTful Object**
@@ -237,7 +237,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create CloudProperties object
           avi_cloudproperties:

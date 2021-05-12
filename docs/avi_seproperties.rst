@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_seproperties
+amolopcito.alb.avi_seproperties
 *****************************
 
 **Module for setup of SeProperties Avi RESTful Object**
@@ -217,7 +217,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create SeProperties object
           avi_seproperties:

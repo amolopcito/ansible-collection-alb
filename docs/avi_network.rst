@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_network
+amolopcito.alb.avi_network
 *****************************
 
 **Module for setup of Network Avi RESTful Object**
@@ -434,7 +434,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create Network object
           avi_network:

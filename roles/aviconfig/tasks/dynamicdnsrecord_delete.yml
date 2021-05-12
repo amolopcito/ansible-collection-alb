@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi DynamicDnsRecord | Delete DynamicDnsRecord
-  vmware.alb.avi_dynamicdnsrecord:
+  amolopcito.alb.avi_dynamicdnsrecord:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi HealthMonitor | Create or Update HealthMonitor
-  vmware.alb.avi_healthmonitor:
+  amolopcito.alb.avi_healthmonitor:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

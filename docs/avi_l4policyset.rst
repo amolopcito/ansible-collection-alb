@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_l4policyset
+amolopcito.alb.avi_l4policyset
 *****************************
 
 **Module for setup of L4PolicySet Avi RESTful Object**
@@ -335,7 +335,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create L4PolicySet object
           avi_l4policyset:

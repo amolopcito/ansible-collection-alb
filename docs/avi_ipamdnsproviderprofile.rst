@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_ipamdnsproviderprofile
+amolopcito.alb.avi_ipamdnsproviderprofile
 *****************************
 
 **Module for setup of IpamDnsProviderProfile Avi RESTful Object**
@@ -488,7 +488,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create IPAM DNS provider setting
             avi_ipamdnsproviderprofile:

@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi SystemConfiguration | Update SystemConfiguration
-  vmware.alb.avi_systemconfiguration:
+  amolopcito.alb.avi_systemconfiguration:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"
@@ -42,7 +42,7 @@
   with_items: "{{ avi_role_cfg.systemconfiguration | default([]) }}"
 
 - name: Avi SystemConfiguration | Update SystemConfiguration without DNS VS reference
-  vmware.alb.avi_systemconfiguration:
+  amolopcito.alb.avi_systemconfiguration:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

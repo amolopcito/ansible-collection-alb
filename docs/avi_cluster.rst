@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_cluster
+amolopcito.alb.avi_cluster
 *****************************
 
 **Module for setup of Cluster Avi RESTful Object**
@@ -243,7 +243,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create Cluster object
           avi_cluster:

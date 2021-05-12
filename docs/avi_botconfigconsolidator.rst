@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_botconfigconsolidator
+amolopcito.alb.avi_botconfigconsolidator
 *****************************
 
 **Module for setup of BotConfigConsolidator Avi RESTful Object**
@@ -232,7 +232,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create BotConfigConsolidator object
           avi_botconfigconsolidator:

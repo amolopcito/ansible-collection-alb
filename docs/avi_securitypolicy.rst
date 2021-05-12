@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_securitypolicy
+amolopcito.alb.avi_securitypolicy
 *****************************
 
 **Module for setup of SecurityPolicy Avi RESTful Object**
@@ -436,7 +436,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create SecurityPolicy object
           avi_securitypolicy:

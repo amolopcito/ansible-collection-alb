@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi UserAccountProfile | Delete UserAccountProfile
-  vmware.alb.avi_useraccountprofile:
+  amolopcito.alb.avi_useraccountprofile:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

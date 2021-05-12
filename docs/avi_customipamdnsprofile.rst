@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_customipamdnsprofile
+amolopcito.alb.avi_customipamdnsprofile
 *****************************
 
 **Module for setup of CustomIpamDnsProfile Avi RESTful Object**
@@ -249,7 +249,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create CustomIpamDnsProfile object
           avi_customipamdnsprofile:

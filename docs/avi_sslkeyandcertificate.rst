@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_sslkeyandcertificate
+amolopcito.alb.avi_sslkeyandcertificate
 *****************************
 
 **Module for setup of SSLKeyAndCertificate Avi RESTful Object**
@@ -683,7 +683,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
         - name: Create a SSL Key and Certificate
           avi_sslkeyandcertificate:

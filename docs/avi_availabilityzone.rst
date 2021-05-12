@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_availabilityzone
+amolopcito.alb.avi_availabilityzone
 *****************************
 
 **Module for setup of AvailabilityZone Avi RESTful Object**
@@ -264,7 +264,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create AvailabilityZone object
           avi_availabilityzone:

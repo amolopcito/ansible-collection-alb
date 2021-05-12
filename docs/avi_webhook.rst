@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_webhook
+amolopcito.alb.avi_webhook
 *****************************
 
 **Module for setup of Webhook Avi RESTful Object**
@@ -266,7 +266,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create Webhook object
           avi_webhook:

@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_poolgroupdeploymentpolicy
+amolopcito.alb.avi_poolgroupdeploymentpolicy
 *****************************
 
 **Module for setup of PoolGroupDeploymentPolicy Avi RESTful Object**
@@ -430,7 +430,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create PoolGroupDeploymentPolicy object
           avi_poolgroupdeploymentpolicy:

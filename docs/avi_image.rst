@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_image
+amolopcito.alb.avi_image
 *****************************
 
 **Module for setup of Image Avi RESTful Object**
@@ -427,7 +427,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create Image object
           avi_image:

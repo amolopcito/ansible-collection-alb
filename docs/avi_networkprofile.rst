@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_networkprofile
+amolopcito.alb.avi_networkprofile
 *****************************
 
 **Module for setup of NetworkProfile Avi RESTful Object**
@@ -311,7 +311,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create a network profile for an UDP application
             avi_networkprofile:

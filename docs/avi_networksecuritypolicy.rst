@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_networksecuritypolicy
+amolopcito.alb.avi_networksecuritypolicy
 *****************************
 
 **Module for setup of NetworkSecurityPolicy Avi RESTful Object**
@@ -388,7 +388,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create a network security policy to block clients represented by ip group known_attackers
             avi_networksecuritypolicy:

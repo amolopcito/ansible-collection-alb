@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_certificatemanagementprofile
+amolopcito.alb.avi_certificatemanagementprofile
 *****************************
 
 **Module for setup of CertificateManagementProfile Avi RESTful Object**
@@ -260,7 +260,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create CertificateManagementProfile object
           avi_certificatemanagementprofile:

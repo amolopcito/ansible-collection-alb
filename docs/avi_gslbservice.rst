@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_gslbservice
+amolopcito.alb.avi_gslbservice
 *****************************
 
 **Module for setup of GslbService Avi RESTful Object**
@@ -727,7 +727,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create GslbService object
           avi_gslbservice:

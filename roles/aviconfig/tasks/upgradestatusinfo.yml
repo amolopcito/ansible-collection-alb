@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi UpgradeStatusInfo | Create or Update UpgradeStatusInfo
-  vmware.alb.avi_upgradestatusinfo:
+  amolopcito.alb.avi_upgradestatusinfo:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

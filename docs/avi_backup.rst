@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_backup
+amolopcito.alb.avi_backup
 *****************************
 
 **Module for setup of Backup Avi RESTful Object**
@@ -271,7 +271,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create Backup object
           avi_backup:

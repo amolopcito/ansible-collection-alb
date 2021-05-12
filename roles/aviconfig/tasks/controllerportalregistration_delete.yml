@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi ControllerPortalRegistration | Delete ControllerPortalRegistration
-  vmware.alb.avi_controllerportalregistration:
+  amolopcito.alb.avi_controllerportalregistration:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_alertemailconfig
+amolopcito.alb.avi_alertemailconfig
 *****************************
 
 **Module for setup of AlertEmailConfig Avi RESTful Object**
@@ -254,7 +254,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create AlertEmailConfig object
           avi_alertemailconfig:

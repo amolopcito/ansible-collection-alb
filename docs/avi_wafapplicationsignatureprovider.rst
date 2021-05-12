@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_wafapplicationsignatureprovider
+amolopcito.alb.avi_wafapplicationsignatureprovider
 *****************************
 
 **Module for setup of WafApplicationSignatureProvider Avi RESTful Object**
@@ -355,7 +355,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create WafApplicationSignatureProvider object
           avi_wafapplicationsignatureprovider:

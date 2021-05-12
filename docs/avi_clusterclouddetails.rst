@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_clusterclouddetails
+amolopcito.alb.avi_clusterclouddetails
 *****************************
 
 **Module for setup of ClusterCloudDetails Avi RESTful Object**
@@ -223,7 +223,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create ClusterCloudDetails object
           avi_clusterclouddetails:

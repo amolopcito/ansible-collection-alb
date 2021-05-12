@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_scheduler
+amolopcito.alb.avi_scheduler
 *****************************
 
 **Module for setup of Scheduler Avi RESTful Object**
@@ -380,7 +380,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create Scheduler object
           avi_scheduler:

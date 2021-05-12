@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_applicationprofile
+amolopcito.alb.avi_applicationprofile
 *****************************
 
 **Module for setup of ApplicationProfile Avi RESTful Object**
@@ -474,7 +474,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create an Application Profile for HTTP application enabled for SSL traffic
             avi_applicationprofile:

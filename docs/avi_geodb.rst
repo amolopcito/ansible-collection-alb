@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_geodb
+amolopcito.alb.avi_geodb
 *****************************
 
 **Module for setup of GeoDB Avi RESTful Object**
@@ -281,7 +281,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create GeoDB object
           avi_geodb:

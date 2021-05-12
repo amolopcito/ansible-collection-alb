@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_tenant
+amolopcito.alb.avi_tenant
 *****************************
 
 **Module for setup of Tenant Avi RESTful Object**
@@ -334,7 +334,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create Tenant using Service Engines in provider mode
             avi_tenant:

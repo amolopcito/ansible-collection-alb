@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_stringgroup
+amolopcito.alb.avi_stringgroup
 *****************************
 
 **Module for setup of StringGroup Avi RESTful Object**
@@ -331,7 +331,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create a string group configuration
             avi_stringgroup:

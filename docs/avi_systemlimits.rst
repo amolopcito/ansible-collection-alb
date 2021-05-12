@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_systemlimits
+amolopcito.alb.avi_systemlimits
 *****************************
 
 **Module for setup of SystemLimits Avi RESTful Object**
@@ -226,7 +226,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create SystemLimits object
           avi_systemlimits:

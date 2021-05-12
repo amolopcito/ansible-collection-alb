@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi NetworkSecurityPolicy | Delete NetworkSecurityPolicy
-  vmware.alb.avi_networksecuritypolicy:
+  amolopcito.alb.avi_networksecuritypolicy:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

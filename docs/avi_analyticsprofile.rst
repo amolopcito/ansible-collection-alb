@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_analyticsprofile
+amolopcito.alb.avi_analyticsprofile
 *****************************
 
 **Module for setup of AnalyticsProfile Avi RESTful Object**
@@ -2438,7 +2438,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create a custom Analytics profile object
             avi_analyticsprofile:

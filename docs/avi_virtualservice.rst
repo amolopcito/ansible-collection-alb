@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_virtualservice
+amolopcito.alb.avi_virtualservice
 *****************************
 
 **Module for setup of VirtualService Avi RESTful Object**
@@ -2569,7 +2569,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
         - name: Create SSL Virtual Service using Pool testpool2
           avi_virtualservice:

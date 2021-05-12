@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_controllersite
+amolopcito.alb.avi_controllersite
 *****************************
 
 **Module for setup of ControllerSite Avi RESTful Object**
@@ -261,7 +261,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create ControllerSite object
           avi_controllersite:

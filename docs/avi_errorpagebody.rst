@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_errorpagebody
+amolopcito.alb.avi_errorpagebody
 *****************************
 
 **Module for setup of ErrorPageBody Avi RESTful Object**
@@ -301,7 +301,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create ErrorPageBody object
           avi_errorpagebody:

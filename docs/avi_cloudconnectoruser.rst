@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_cloudconnectoruser
+amolopcito.alb.avi_cloudconnectoruser
 *****************************
 
 **Module for setup of CloudConnectorUser Avi RESTful Object**
@@ -402,7 +402,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create a Cloud connector user that is used for integration into cloud platforms
             avi_cloudconnectoruser:

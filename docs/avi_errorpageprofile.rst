@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_errorpageprofile
+amolopcito.alb.avi_errorpageprofile
 *****************************
 
 **Module for setup of ErrorPageProfile Avi RESTful Object**
@@ -341,7 +341,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create ErrorPageProfile object
           avi_errorpageprofile:

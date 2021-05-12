@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_role
+amolopcito.alb.avi_role
 *****************************
 
 **Module for setup of Role Avi RESTful Object**
@@ -269,7 +269,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create Role object
           avi_role:

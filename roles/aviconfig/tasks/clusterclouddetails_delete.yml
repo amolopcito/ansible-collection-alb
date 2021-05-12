@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi ClusterCloudDetails | Delete ClusterCloudDetails
-  vmware.alb.avi_clusterclouddetails:
+  amolopcito.alb.avi_clusterclouddetails:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

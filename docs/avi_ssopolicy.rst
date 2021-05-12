@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_ssopolicy
+amolopcito.alb.avi_ssopolicy
 *****************************
 
 **Module for setup of SSOPolicy Avi RESTful Object**
@@ -330,7 +330,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create SSOPolicy object
           avi_ssopolicy:

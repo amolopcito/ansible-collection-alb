@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_labelgroup
+amolopcito.alb.avi_labelgroup
 *****************************
 
 **Module for setup of LabelGroup Avi RESTful Object**
@@ -209,7 +209,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create LabelGroup object
           avi_labelgroup:

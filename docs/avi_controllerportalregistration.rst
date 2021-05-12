@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_controllerportalregistration
+amolopcito.alb.avi_controllerportalregistration
 *****************************
 
 **Module for setup of ControllerPortalRegistration Avi RESTful Object**
@@ -217,7 +217,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create ControllerPortalRegistration object
           avi_controllerportalregistration:

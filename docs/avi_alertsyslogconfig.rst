@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_alertsyslogconfig
+amolopcito.alb.avi_alertsyslogconfig
 *****************************
 
 **Module for setup of AlertSyslogConfig Avi RESTful Object**
@@ -233,7 +233,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create Alert Syslog object to forward all events to external syslog server
             avi_alertsyslogconfig:

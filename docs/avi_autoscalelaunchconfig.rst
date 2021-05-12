@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_autoscalelaunchconfig
+amolopcito.alb.avi_autoscalelaunchconfig
 *****************************
 
 **Module for setup of AutoScaleLaunchConfig Avi RESTful Object**
@@ -342,7 +342,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create an Autoscale Launch configuration.
             avi_autoscalelaunchconfig:

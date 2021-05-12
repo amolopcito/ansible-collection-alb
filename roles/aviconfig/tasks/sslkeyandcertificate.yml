@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi SSLKeyAndCertificate | Upload or Update SSL certificate - always changed due to sensitve field
-  vmware.alb.avi_sslkeyandcertificate:
+  amolopcito.alb.avi_sslkeyandcertificate:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"
@@ -90,7 +90,7 @@
     - item.certificate.certificate is undefined
 
 - name: Avi SSLKeyAndCertificate | Create / Update self signed certs
-  vmware.alb.avi_sslkeyandcertificate:
+  amolopcito.alb.avi_sslkeyandcertificate:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_pingaccessagent
+amolopcito.alb.avi_pingaccessagent
 *****************************
 
 **Module for setup of PingAccessAgent Avi RESTful Object**
@@ -347,7 +347,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create PingAccessAgent object
           avi_pingaccessagent:

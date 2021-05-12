@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_fileobject
+amolopcito.alb.avi_fileobject
 *****************************
 
 **Module for setup of FileObject Avi RESTful Object**
@@ -456,7 +456,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create FileObject object
           avi_fileobject:

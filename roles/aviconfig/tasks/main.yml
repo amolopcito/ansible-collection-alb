@@ -37,7 +37,7 @@
     config_resources: []
 
 - name: Avi Config | Check tenant exists
-  vmware.alb.avi_api_session:
+  amolopcito.alb.avi_api_session:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username  | default(omit) }}"
     password: "{{ avi_password  | default(omit) }}"
@@ -60,7 +60,7 @@
     - tenant_res.results[0].obj.count == 0
 
 - name: Avi Config | Fetch cloud status
-  vmware.alb.avi_api_session:
+  amolopcito.alb.avi_api_session:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username  | default(omit) }}"
     password: "{{ avi_password  | default(omit) }}"

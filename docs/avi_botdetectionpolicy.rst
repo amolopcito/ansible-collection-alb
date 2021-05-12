@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_botdetectionpolicy
+amolopcito.alb.avi_botdetectionpolicy
 *****************************
 
 **Module for setup of BotDetectionPolicy Avi RESTful Object**
@@ -350,7 +350,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create BotDetectionPolicy object
           avi_botdetectionpolicy:

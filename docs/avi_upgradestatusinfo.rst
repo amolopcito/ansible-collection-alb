@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_upgradestatusinfo
+amolopcito.alb.avi_upgradestatusinfo
 *****************************
 
 **Module for setup of UpgradeStatusInfo Avi RESTful Object**
@@ -1084,7 +1084,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create UpgradeStatusInfo object
           avi_upgradestatusinfo:

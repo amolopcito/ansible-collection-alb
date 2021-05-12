@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_vrfcontext
+amolopcito.alb.avi_vrfcontext
 *****************************
 
 **Module for setup of VrfContext Avi RESTful Object**
@@ -460,7 +460,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create VrfContext object
           avi_vrfcontext:

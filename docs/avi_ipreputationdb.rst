@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_ipreputationdb
+amolopcito.alb.avi_ipreputationdb
 *****************************
 
 **Module for setup of IPReputationDB Avi RESTful Object**
@@ -399,7 +399,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create IPReputationDB object
           avi_ipreputationdb:

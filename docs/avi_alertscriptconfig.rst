@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_alertscriptconfig
+amolopcito.alb.avi_alertscriptconfig
 *****************************
 
 **Module for setup of AlertScriptConfig Avi RESTful Object**
@@ -219,7 +219,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create Alert Script to perform AWS server autoscaling
             avi_alertscriptconfig:

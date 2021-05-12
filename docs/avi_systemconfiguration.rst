@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_systemconfiguration
+amolopcito.alb.avi_systemconfiguration
 *****************************
 
 **Module for setup of SystemConfiguration Avi RESTful Object**
@@ -566,7 +566,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create SystemConfiguration object
           avi_systemconfiguration:

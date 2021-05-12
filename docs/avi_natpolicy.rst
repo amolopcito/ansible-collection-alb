@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_natpolicy
+amolopcito.alb.avi_natpolicy
 *****************************
 
 **Module for setup of NatPolicy Avi RESTful Object**
@@ -312,7 +312,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create NatPolicy object
           avi_natpolicy:

@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_testsedatastorelevel2
+amolopcito.alb.avi_testsedatastorelevel2
 *****************************
 
 **Module for setup of TestSeDatastoreLevel2 Avi RESTful Object**
@@ -223,7 +223,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create TestSeDatastoreLevel2 object
           avi_testsedatastorelevel2:

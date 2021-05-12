@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_gslbgeodbprofile
+amolopcito.alb.avi_gslbgeodbprofile
 *****************************
 
 **Module for setup of GslbGeoDbProfile Avi RESTful Object**
@@ -327,7 +327,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create GslbGeoDbProfile object
           avi_gslbgeodbprofile:

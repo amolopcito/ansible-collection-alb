@@ -2,7 +2,7 @@
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
 ---
 - name: Avi JWTServerProfile | Create or Update JWTServerProfile
-  vmware.alb.avi_jwtserverprofile:
+  amolopcito.alb.avi_jwtserverprofile:
     controller: "{{ avi_controller | default(omit) }}"
     username: "{{ avi_username | default(omit) }}"
     password: "{{ avi_password | default(omit) }}"

@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_poolgroup
+amolopcito.alb.avi_poolgroup
 *****************************
 
 **Module for setup of PoolGroup Avi RESTful Object**
@@ -504,7 +504,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create PoolGroup object
           avi_poolgroup:

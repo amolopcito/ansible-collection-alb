@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_serviceengine
+amolopcito.alb.avi_serviceengine
 *****************************
 
 **Module for setup of ServiceEngine Avi RESTful Object**
@@ -433,7 +433,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create ServiceEngine object
           avi_serviceengine:

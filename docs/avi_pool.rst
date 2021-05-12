@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_pool
+amolopcito.alb.avi_pool
 *****************************
 
 **Module for setup of Pool Avi RESTful Object**
@@ -1856,7 +1856,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
         - name: Create a Pool with two servers and HTTP monitor
           avi_pool:

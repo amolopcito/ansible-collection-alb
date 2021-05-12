@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_hardwaresecuritymodulegroup
+amolopcito.alb.avi_hardwaresecuritymodulegroup
 *****************************
 
 **Module for setup of HardwareSecurityModuleGroup Avi RESTful Object**
@@ -269,7 +269,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create HardwareSecurityModuleGroup object
           avi_hardwaresecuritymodulegroup:

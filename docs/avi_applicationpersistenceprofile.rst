@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_applicationpersistenceprofile
+amolopcito.alb.avi_applicationpersistenceprofile
 *****************************
 
 **Module for setup of ApplicationPersistenceProfile Avi RESTful Object**
@@ -426,7 +426,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:        
           - name: Create an Application Persistence setting using http cookie.
             avi_applicationpersistenceprofile:

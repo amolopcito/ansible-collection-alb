@@ -2,7 +2,7 @@
 # module_check: supported
 
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
-# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
+# SPDX-License-Identifier: Apache License 2.0
 
 
 from __future__ import (absolute_import, division, print_function)
@@ -25,6 +25,18 @@ options:
             - The state that should be applied on the entity.
         default: present
         choices: ["absent", "present"]
+        type: str
+    avi_api_update_method:
+        description:
+            - Default method for object update is HTTP PUT.
+            - Setting to patch will override that behavior to use HTTP PATCH.
+        default: put
+        choices: ["put", "patch"]
+        type: str
+    avi_api_patch_op:
+        description:
+            - Patch operation to use when using avi_api_update_method as patch.
+        choices: ["add", "replace", "delete", "remove"]
         type: str
     name:
         description:
@@ -121,18 +133,6 @@ options:
         description:
             - Rules to bypass WAF.
         type: dict
-    avi_api_update_method:
-        description:
-            - Default method for object update is HTTP PUT.
-            - Setting to patch will override that behavior to use HTTP PATCH.
-        default: put
-        choices: ["put", "patch"]
-        type: str
-    avi_api_patch_op:
-        description:
-            - Patch operation to use when using avi_api_update_method as patch.
-        choices: ["add", "replace", "delete", "remove"]
-        type: str
     avi_patch_path:
         description:
             - Patch path to use when using avi_api_update_method as patch.

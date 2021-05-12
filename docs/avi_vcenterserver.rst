@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_vcenterserver
+amolopcito.alb.avi_vcenterserver
 *****************************
 
 **Module for setup of VCenterServer Avi RESTful Object**
@@ -307,7 +307,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create VCenterServer object
           avi_vcenterserver:

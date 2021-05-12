@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_serverautoscalepolicy
+amolopcito.alb.avi_serverautoscalepolicy
 *****************************
 
 **Module for setup of ServerAutoScalePolicy Avi RESTful Object**
@@ -556,7 +556,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create ServerAutoScalePolicy object
           avi_serverautoscalepolicy:

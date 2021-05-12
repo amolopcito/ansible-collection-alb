@@ -2,7 +2,7 @@
 
 
 *****************************
-vmware.alb.avi_pkiprofile
+amolopcito.alb.avi_pkiprofile
 *****************************
 
 **Module for setup of PKIProfile Avi RESTful Object**
@@ -404,7 +404,7 @@ Examples
     - hosts: localhost
       connection: local
       collections:
-        - vmware.alb
+        - amolopcito.alb
       tasks:
         - name: Example to create PKIProfile object
           avi_pkiprofile:
