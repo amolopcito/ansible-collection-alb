@@ -2,7 +2,7 @@
 # module_check: not supported
 
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
-# SPDX-License-Identifier: Apache License 2.0
+# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
 
 from __future__ import (absolute_import, division, print_function)
@@ -47,12 +47,12 @@ options:
         default: 60
         type: int
 extends_documentation_fragment:
-    - vmware.alb.avi
+    - amolopcito.alb.avi
 '''
 
 EXAMPLES = '''
   - name: Get Pool Information using avi_api_session
-    vmware.alb.avi_api_session:
+    amolopcito.alb.avi_api_session:
       controller: "{{ controller }}"
       username: "{{ username }}"
       password: "{{ password }}"
@@ -63,7 +63,7 @@ EXAMPLES = '''
       api_version: 16.4
     register: pool_results
   - name: Patch Pool with list of servers
-    vmware.alb.avi_api_session:
+    amolopcito.alb.avi_api_session:
       controller: "{{ controller }}"
       username: "{{ username }}"
       password: "{{ password }}"
@@ -81,7 +81,7 @@ EXAMPLES = '''
                 type: V4
     register: updated_pool
   - name: Fetch Pool metrics bandwidth and connections rate
-    vmware.alb.avi_api_session:
+    amolopcito.alb.avi_api_session:
       controller: "{{ controller }}"
       username: "{{ username }}"
       password: "{{ password }}"
@@ -95,7 +95,7 @@ EXAMPLES = '''
         limit: 10
     register: pool_metrics
   - name: Wait for Controller upgrade to finish
-    vmware.alb.avi_api_session:
+    amolopcito.alb.avi_api_session:
       controller: "{{ controller }}"
       username: "{{ username }}"
       password: "{{ password }}"
@@ -123,10 +123,10 @@ from ansible.module_utils.basic import AnsibleModule
 from copy import deepcopy
 
 try:
-    from ansible_collections.vmware.alb.plugins.module_utils.utils.ansible_utils import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.utils.ansible_utils import (
         avi_common_argument_spec, ansible_return, avi_obj_cmp,
         cleanup_absent_fields)
-    from ansible_collections.vmware.alb.plugins.module_utils.avi_api import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.avi_api import (
         ApiSession, AviCredentials)
     HAS_REQUESTS = True
 except ImportError:

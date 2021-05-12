@@ -2,7 +2,7 @@
 # module_check: supported
 
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
-# SPDX-License-Identifier: Apache License 2.0
+# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
 
 from __future__ import (absolute_import, division, print_function)
@@ -43,7 +43,7 @@ options:
         choices: ["absent","present"]
         type: str
 extends_documentation_fragment:
-    - vmware.alb.avi
+    - amolopcito.alb.avi
 '''
 
 EXAMPLES = '''
@@ -65,7 +65,7 @@ EXAMPLES = '''
                 type: V4
               ratio: 3
   - name: Patch GSLB Service to delete an existing member
-    vmware.alb.avi_gslbservice_patch_member:
+    amolopcito.alb.avi_gslbservice_patch_member:
       controller: "{{ controller }}"
       username: "{{ username }}"
       password: "{{ password }}"
@@ -82,7 +82,7 @@ EXAMPLES = '''
                 type: V4
               ratio: 3
   - name: Update priority of GSLB Service Pool
-    vmware.alb.avi_gslbservice_patch_member:
+    amolopcito.alb.avi_gslbservice_patch_member:
       controller: ""
       username: ""
       password: ""
@@ -109,10 +109,10 @@ from ansible.module_utils.basic import AnsibleModule
 from copy import deepcopy
 
 try:
-    from ansible_collections.vmware.alb.plugins.module_utils.utils.ansible_utils import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.utils.ansible_utils import (
         avi_common_argument_spec, ansible_return, AviCheckModeResponse, avi_obj_cmp,
         cleanup_absent_fields)
-    from ansible_collections.vmware.alb.plugins.module_utils.avi_api import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.avi_api import (
         ApiSession, AviCredentials)
     HAS_REQUESTS = True
 except ImportError:

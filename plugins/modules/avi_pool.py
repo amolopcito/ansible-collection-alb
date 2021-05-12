@@ -3,7 +3,7 @@
 
 # Avi Version: 17.1.1
 # Copyright 2021 VMware, Inc.  All rights reserved. VMware Confidential
-# SPDX-License-Identifier: Apache License 2.0
+# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
@@ -505,12 +505,12 @@ options:
             - It is a reference to an object of type vrfcontext.
         type: str
 extends_documentation_fragment:
-    - vmware.alb.avi
+    - amolopcito.alb.avi
 '''
 
 EXAMPLES = """
 - name: Create a Pool with two servers and HTTP monitor
-  vmware.alb.avi_pool:
+  amolopcito.alb.avi_pool:
     controller: 192.168.138.18
     username: avi_user
     password: avi_password
@@ -528,7 +528,7 @@ EXAMPLES = """
             type: V4
 
 - name: Patch pool with a single server using patch op and avi_credentials
-  vmware.alb.avi_pool:
+  amolopcito.alb.avi_pool:
     avi_api_update_method: patch
     avi_api_patch_op: delete
     avi_credentials: "{{avi_credentials}}"
@@ -551,7 +551,7 @@ obj:
 
 from ansible.module_utils.basic import AnsibleModule
 try:
-    from ansible_collections.vmware.alb.plugins.module_utils.utils.ansible_utils import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.utils.ansible_utils import (
         avi_common_argument_spec, avi_ansible_api)
     HAS_REQUESTS = True
 except ImportError:

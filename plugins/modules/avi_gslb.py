@@ -3,7 +3,7 @@
 
 # Avi Version: 17.1.1
 # Copyright 2021 VMware, Inc.  All rights reserved. VMware Confidential
-# SPDX-License-Identifier: Apache License 2.0
+# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
@@ -189,12 +189,12 @@ options:
             - Default value when not specified in API or module is interpreted by Avi Controller as 0.
         type: int
 extends_documentation_fragment:
-    - vmware.alb.avi
+    - amolopcito.alb.avi
 '''
 
 EXAMPLES = """
 - name: Example to create Gslb object
-  vmware.alb.avi_gslb:
+  amolopcito.alb.avi_gslb:
     name: "test-gslb"
     avi_credentials:
       username: '{{ username }}'
@@ -227,7 +227,7 @@ EXAMPLES = """
     leader_cluster_uuid: "cluster-d4ee5fcc-3e0a-4d4f-9ae6-4182bc605829"
 
 - name: Update Gslb site's configurations (Patch Add Operation)
-  vmware.alb.avi_gslb:
+  amolopcito.alb.avi_gslb:
     avi_credentials:
       username: '{{ username }}'
       password: '{{ password }}'
@@ -252,7 +252,7 @@ EXAMPLES = """
         cluster_uuid: "cluster-d4ee5fcc-3e0a-4d4f-9ae6-4182bc605829"
 
 - name: Update Gslb site's configurations (Patch Replace Operation)
-  vmware.alb.avi_gslb:
+  amolopcito.alb.avi_gslb:
     avi_credentials:
       username: "{{ username }}"
       password: "{{ password }}"
@@ -278,7 +278,7 @@ EXAMPLES = """
         cluster_uuid: "cluster-d4ee5fcc-3e0a-4d4f-9ae6-4182bc605829"
 
 - name: Delete Gslb site's den_vses configurations (Patch Delete(dns_vses) Operation)
-  vmware.alb.avi_gslb:
+  amolopcito.alb.avi_gslb:
     avi_credentials:
       username: "{{ username }}"
       password: "{{ password }}"
@@ -294,7 +294,7 @@ EXAMPLES = """
       - ip_addresses: "192.168.138.23"
 
 - name: Delete Gslb complete site's configurations (Patch Delete(site) Operation)
-  vmware.alb.avi_gslb:
+  amolopcito.alb.avi_gslb:
     avi_credentials: "{{ avi_credentials }}"
     api_version: 18.2.8
     avi_api_update_method: patch
@@ -316,9 +316,9 @@ obj:
 
 from ansible.module_utils.basic import AnsibleModule
 try:
-    from ansible_collections.vmware.alb.plugins.module_utils.utils.ansible_utils import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.utils.ansible_utils import (
         avi_common_argument_spec, avi_ansible_api)
-    from ansible_collections.vmware.alb.plugins.module_utils.avi_api import ApiSession, AviCredentials
+    from ansible_collections.amolopcito.alb.plugins.module_utils.avi_api import ApiSession, AviCredentials
     HAS_REQUESTS = True
 except ImportError:
     HAS_REQUESTS = False

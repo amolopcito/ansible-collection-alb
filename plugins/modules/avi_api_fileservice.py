@@ -2,7 +2,7 @@
 # module_check: not supported
 
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
-# SPDX-License-Identifier: Apache License 2.0
+# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
 
 from __future__ import (absolute_import, division, print_function)
@@ -52,13 +52,13 @@ options:
         default: 60
         type: int
 extends_documentation_fragment:
-    - vmware.alb.avi
+    - amolopcito.alb.avi
 '''
 
 EXAMPLES = '''
 
   - name: Download se image from controller
-    vmware.alb.avi_api_fileservice:
+    amolopcito.alb.avi_api_fileservice:
       controller: ""
       username: ""
       password: ""
@@ -68,7 +68,7 @@ EXAMPLES = '''
       api_version: 17.2.8
 
   - name: Upload HSM package to controller
-    vmware.alb.avi_api_fileservice:
+    amolopcito.alb.avi_api_fileservice:
       controller: ""
       username: ""
       password: ""
@@ -98,10 +98,10 @@ except ImportError:
     HAS_LIB = False
 
 try:
-    from ansible_collections.vmware.alb.plugins.module_utils.utils.ansible_utils import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.utils.ansible_utils import (
         avi_common_argument_spec, ansible_return, avi_obj_cmp,
         cleanup_absent_fields)
-    from ansible_collections.vmware.alb.plugins.module_utils.avi_api import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.avi_api import (
         ApiSession, AviCredentials)
     HAS_REQUESTS = True
 except ImportError:

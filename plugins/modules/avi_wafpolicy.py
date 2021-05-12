@@ -2,7 +2,7 @@
 # module_check: supported
 
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
-# SPDX-License-Identifier: Apache License 2.0
+# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
 
 from __future__ import (absolute_import, division, print_function)
@@ -25,18 +25,6 @@ options:
             - The state that should be applied on the entity.
         default: present
         choices: ["absent", "present"]
-        type: str
-    avi_api_update_method:
-        description:
-            - Default method for object update is HTTP PUT.
-            - Setting to patch will override that behavior to use HTTP PATCH.
-        default: put
-        choices: ["put", "patch"]
-        type: str
-    avi_api_patch_op:
-        description:
-            - Patch operation to use when using avi_api_update_method as patch.
-        choices: ["add", "replace", "delete", "remove"]
         type: str
     name:
         description:
@@ -133,6 +121,18 @@ options:
         description:
             - Rules to bypass WAF.
         type: dict
+    avi_api_update_method:
+        description:
+            - Default method for object update is HTTP PUT.
+            - Setting to patch will override that behavior to use HTTP PATCH.
+        default: put
+        choices: ["put", "patch"]
+        type: str
+    avi_api_patch_op:
+        description:
+            - Patch operation to use when using avi_api_update_method as patch.
+        choices: ["add", "replace", "delete", "remove"]
+        type: str
     avi_patch_path:
         description:
             - Patch path to use when using avi_api_update_method as patch.
@@ -142,12 +142,12 @@ options:
             - Patch value to use when using avi_api_update_method as patch.
         type: str
 extends_documentation_fragment:
-    - vmware.alb.avi
+    - amolopcito.alb.avi
 '''
 
 EXAMPLES = '''
   - name: Create WAF Policy Example using System-Waf-Policy as base policy
-    vmware.alb.avi_wafpolicy:
+    amolopcito.alb.avi_wafpolicy:
       avi_credentials: ''
       patch_file: ./vs-1-waf-policy-patches.json
       base_waf_policy: System-WAF-Policy
@@ -168,10 +168,10 @@ from ansible.module_utils.basic import AnsibleModule
 
 
 try:
-    from ansible_collections.vmware.alb.plugins.module_utils.utils.ansible_utils import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.utils.ansible_utils import (
         avi_common_argument_spec, ansible_return, avi_obj_cmp,
         cleanup_absent_fields)
-    from ansible_collections.vmware.alb.plugins.module_utils.avi_api import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.avi_api import (
         ApiSession, AviCredentials)
     HAS_REQUESTS = True
 except ImportError:

@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache License 2.0
 
 from __future__ import (absolute_import, division, print_function)
-from ansible_collections.vmware.alb.plugins.module_utils.avi_api import ApiSession, \
+from ansible_collections.amolopcito.alb.plugins.module_utils.avi_api import ApiSession, \
     sessionDict, APIError
 import requests
 import re

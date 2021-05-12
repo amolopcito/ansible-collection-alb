@@ -6,7 +6,7 @@ description: VMware Advanced Load Balancer (formerly Avi) Ansible Collection
 issues: https://github.com/vmware/ansible-collection-alb/issues
 license_file: LICENSE
 name: alb
-namespace: vmware
+namespace: amolopcito
 readme: README.md
 repository: https://github.com/vmware/ansible-collection-alb
 tags:

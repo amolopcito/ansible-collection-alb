@@ -3,7 +3,7 @@
 
 # Avi Version: 17.1.1
 # Copyright 2021 VMware, Inc.  All rights reserved. VMware Confidential
-# SPDX-License-Identifier: Apache License 2.0
+# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
@@ -126,12 +126,12 @@ options:
             - Uuid of the http policy set.
         type: str
 extends_documentation_fragment:
-    - vmware.alb.avi
+    - amolopcito.alb.avi
 '''
 
 EXAMPLES = """
 - name: Create a HTTP Policy set two switch between testpool1 and testpool2
-  vmware.alb.avi_httppolicyset:
+  amolopcito.alb.avi_httppolicyset:
     controller: 192.168.138.18
     username: admin
     password: password
@@ -177,7 +177,7 @@ obj:
 
 from ansible.module_utils.basic import AnsibleModule
 try:
-    from ansible_collections.vmware.alb.plugins.module_utils.utils.ansible_utils import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.utils.ansible_utils import (
         avi_common_argument_spec, avi_ansible_api)
     HAS_REQUESTS = True
 except ImportError:

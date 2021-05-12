@@ -13,7 +13,7 @@ import sys
 import yaml
 import logging
 from copy import deepcopy
-from ansible_collections.vmware.alb.plugins.module_utils.avi_api import ApiSession, ObjectNotFound, avi_sdk_syslog_logger, \
+from ansible_collections.amolopcito.alb.plugins.module_utils.avi_api import ApiSession, ObjectNotFound, avi_sdk_syslog_logger, \
     AviCredentials
 
 if os.environ.get('AVI_LOG_HANDLER', '') != 'syslog':

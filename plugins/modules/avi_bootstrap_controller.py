@@ -2,7 +2,7 @@
 # module_check: not supported
 
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
-# SPDX-License-Identifier: Apache License 2.0
+# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
@@ -47,12 +47,12 @@ options:
         default: 10
         type: int
 extends_documentation_fragment:
-    - vmware.alb.avi
+    - amolopcito.alb.avi
 '''
 
 EXAMPLES = '''
   - name: Initialize user password
-    vmware.alb.avi_bootstrap_controller:
+    amolopcito.alb.avi_bootstrap_controller:
       avi_credentials:
         controller: "controller_ip"
         port: "443"
@@ -73,10 +73,10 @@ obj:
 import time
 from ansible.module_utils.basic import AnsibleModule
 try:
-    from ansible_collections.vmware.alb.plugins.module_utils.utils.ansible_utils import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.utils.ansible_utils import (
         avi_common_argument_spec, ansible_return, avi_obj_cmp,
         cleanup_absent_fields)
-    from ansible_collections.vmware.alb.plugins.module_utils.avi_api import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.avi_api import (
         ApiSession, AviCredentials)
 
     from pkg_resources import parse_version

@@ -2,7 +2,7 @@
 # module_check: not supported
 
 # Copyright 2021 VMware, Inc. All rights reserved. VMware Confidential
-# SPDX-License-Identifier: Apache License 2.0
+# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
 
 from __future__ import (absolute_import, division, print_function)
@@ -22,12 +22,12 @@ description:
     - This module can be used to obtain the version of the Avi REST API. U(https://avinetworks.com/)
 options: {}
 extends_documentation_fragment:
-    - vmware.alb.avi
+    - amolopcito.alb.avi
 '''
 
 EXAMPLES = '''
   - name: Get AVI API version
-    vmware.alb.avi_api_version:
+    amolopcito.alb.avi_api_version:
       controller: ""
       username: ""
       password: ""
@@ -46,10 +46,10 @@ obj:
 from ansible.module_utils.basic import AnsibleModule
 
 try:
-    from ansible_collections.vmware.alb.plugins.module_utils.utils.ansible_utils import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.utils.ansible_utils import (
         avi_common_argument_spec, ansible_return, avi_obj_cmp,
         cleanup_absent_fields)
-    from ansible_collections.vmware.alb.plugins.module_utils.avi_api import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.avi_api import (
         ApiSession, AviCredentials)
     HAS_REQUESTS = True
 except ImportError:

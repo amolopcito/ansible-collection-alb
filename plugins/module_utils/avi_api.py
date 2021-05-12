@@ -42,7 +42,7 @@ def avi_timedelta(td):
     return ts
 
 
-def avi_sdk_syslog_logger(logger_name='ansible_collections.vmware.alb.plugins.module_utils'):
+def avi_sdk_syslog_logger(logger_name='ansible_collections.amolopcito.alb.plugins.module_utils'):
     # The following sets up syslog module to log underlying avi SDK messages
     # based on the environment variables:
     #   AVI_LOG_HANDLER: names the logging handler to use. Only syslog is

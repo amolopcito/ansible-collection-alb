@@ -2,7 +2,7 @@
 # module_check: supported
 
 # Copyright 2021 VMware, Inc.  All rights reserved. VMware Confidential
-# SPDX-License-Identifier: Apache License 2.0
+# GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
@@ -143,12 +143,12 @@ options:
             - Uuid of the ipam/dns provider profile.
         type: str
 extends_documentation_fragment:
-    - vmware.alb.avi
+    - amolopcito.alb.avi
 '''
 
 EXAMPLES = """
   - name: Create IPAM DNS provider setting
-    vmware.alb.avi_ipamdnsproviderprofile:
+    amolopcito.alb.avi_ipamdnsproviderprofile:
       controller: '{{ controller }}'
       username: '{{ username }}'
       password: '{{ password }}'
@@ -177,7 +177,7 @@ obj:
 
 from ansible.module_utils.basic import AnsibleModule
 try:
-    from ansible_collections.vmware.alb.plugins.module_utils.utils.ansible_utils import (
+    from ansible_collections.amolopcito.alb.plugins.module_utils.utils.ansible_utils import (
         avi_common_argument_spec, avi_ansible_api)
     HAS_REQUESTS = True
 except ImportError:

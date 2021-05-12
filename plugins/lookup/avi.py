@@ -29,7 +29,7 @@ options:
             - UUID of the object to query
 
 extends_documentation_fragment:
-- vmware.alb.avi
+- amolopcito.alb.avi
 '''
 
 EXAMPLES = """
@@ -53,11 +53,11 @@ RETURN = """
 """
 
 from ansible.module_utils._text import to_native
-from ansible.errors import AnsibleError
+from ansible.errors import AnsibleError, AnsibleParserError
 from ansible.plugins.lookup import LookupBase
 from ansible.utils.display import Display
-from ansible_collections.vmware.alb.plugins.module_utils.sdk.avi_api import ApiSession, AviCredentials
-from ansible_collections.vmware.alb.plugins.module_utils.sdk.avi_api import (AviServerError,
+from ansible_collections.amolopcito.alb.plugins.module_utils.sdk.avi_api import ApiSession, AviCredentials
+from ansible_collections.amolopcito.alb.plugins.module_utils.sdk.avi_api import (AviServerError,
                                                                              ObjectNotFound,
                                                                              APIError)
 
