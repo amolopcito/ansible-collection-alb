@@ -3,14 +3,14 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  Test:
+  test:
     name: Test alb collection
     runs-on: ubuntu-latest
     env:
       HOME: "/home/runner"
     defaults:
       run:
-        working-directory: ${{ env.HOME }}/.ansible/collections/ansible_collections/amolopcito/alb
+        working-directory: "${{ env.HOME }}/.ansible/collections/ansible_collections/amolopcito/alb"
     strategy:
       matrix:
         ansible: [2.9.17, 2.10.5]
