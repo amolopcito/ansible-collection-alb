@@ -40,23 +40,23 @@ jobs:
 
     - name: Run sanity test validate-modules
       run: ansible-test sanity --test validate-modules --docker -v --color --truncate 0 --coverage --python 3.8
-      working-directory: ${{ HOME }}/.ansible/collections/ansible_collections/amolopcito/alb
+      working-directory: ${{ env.HOME }}/.ansible/collections/ansible_collections/amolopcito/alb
 
     - name: Run sanity test yamllint
       run: ansible-test sanity --test yamllint --docker -v --color --truncate 0 --coverage --python 3.8
-      working-directory: /home/runner/.ansible/collections/ansible_collections/amolopcito/alb
+      working-directory: ${{ env.HOME }}/.ansible/collections/ansible_collections/amolopcito/alb
 
     - name: Run sanity test ansible-doc
       run: ansible-test sanity --test ansible-doc --docker -v --color --truncate 0 --coverage --python 3.8
-      working-directory: ${{ HOME }}/.ansible/collections/ansible_collections/amolopcito/alb
+      working-directory: ${{ env.HOME }}/.ansible/collections/ansible_collections/amolopcito/alb
 
     - name: Run sanity test compile
       run: ansible-test sanity --test compile --docker -v --color --truncate 0 --coverage --python 3.8
-      working-directory: ${{ HOME }}/.ansible/collections/ansible_collections/amolopcito/alb
+      working-directory: ${{ env.HOME }}/.ansible/collections/ansible_collections/amolopcito/alb
 
     - name: Run unit tests
       run: ansible-test units --docker -v --color --truncate 0 --python 3.8 --coverage
-      working-directory: ${{ HOME }}/.ansible/collections/ansible_collections/amolopcito/alb
+      working-directory: ${{ env.HOME }}/.ansible/collections/ansible_collections/amolopcito/alb
 
   importer:
     name: Galaxy-importer check
