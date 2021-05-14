@@ -23,11 +23,11 @@ jobs:
       with:
         python-version: 3.8
 
-    - name: Install coverage (v4.5.4)
-      run: pip install coverage==4.5.4
-
     - name: Install ansible-base (v${{ matrix.ansible }})
       run: pip install https://github.com/ansible/ansible/archive/v${{ matrix.ansible }}.tar.gz --disable-pip-version-check
+
+    - name: Install coverage (v4.5.4)
+      run: pip install coverage==4.5.4
 
     - name: Build a collection tarball
       run: ansible-galaxy collection build --output-path "${GITHUB_WORKSPACE}/.cache/collection-tarballs"
@@ -59,17 +59,18 @@ jobs:
   importer:
     name: Galaxy-importer check
     runs-on: ubuntu-latest
+    needs:
+      - test
     env:
       ANSIBLE_SKIP_CONFLICT_CHECK: 1
     steps:
       - name: Set up Python 3.8
-        id: pipversion
         uses: actions/setup-python@v1
         with:
           python-version: 3.8
 
       - name: Get Python version
-        run: echo "::debug::${{ steps.pipversion.outputs }}"
+        run: echo "pip --version"
 
       - name: Install ansible-base (v2.9.17)
         id: ansible-base
