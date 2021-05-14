@@ -7,7 +7,7 @@ jobs:
     name: Test alb collection
     runs-on: ubuntu-latest
     env:
-      HOME: /home/runner
+      HOME: "/home/runner"
     defaults:
       run:
         working-directory: ${{ env.HOME }}/.ansible/collections/ansible_collections/amolopcito/alb
@@ -69,13 +69,11 @@ jobs:
           python-version: 3.8
 
       - name: Get Python version
-        run: echo "::debug::${{ steps.pipversion.outputs.* }}"
+        run: echo "::debug::${{ steps.pipversion.outputs }}"
 
       - name: Install ansible-base (v2.9.17)
         id: ansible-base
-        run: |
-          "echo ::set-output name=mix-test::pip install https://github.com/ansible/ansible/archive/v2.9.17.tar.gz --disable-pip-version-check"
-          "echo ::debug::${{ steps.ansible-base.outputs.* }}"
+        run: pip install https://github.com/ansible/ansible/archive/v2.9.17.tar.gz --disable-pip-version-check
 
       - name: Download migrated collection artifacts
         uses: actions/download-artifact@v1
