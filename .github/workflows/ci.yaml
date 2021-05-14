@@ -65,6 +65,7 @@ jobs:
       - test
     env:
       ANSIBLE_SKIP_CONFLICT_CHECK: 1
+      HOME: "/home/runner"
     steps:
       - name: Set up Python 3.8
         uses: actions/setup-python@v1
@@ -72,7 +73,7 @@ jobs:
           python-version: 3.8
 
       - name: Get Python version
-        run: echo "::debug::$(echo $(echo pip --version))"
+        run: echo $(echo $(echo pip --version))
 
       - name: Install ansible-base (v2.9.17)
         id: ansible-base
@@ -88,7 +89,7 @@ jobs:
         run: ansible-galaxy collection install .cache/collection-tarballs/*.tar.gz
 
       - name: Install galaxy-importer
-        run: ${{ env.ANSIBLE_SKIP_CONFLICT_CHECK }} pip install galaxy-importer
+        run: ANSIBLE_SKIP_CONFLICT_CHECK=${{ env.ANSIBLE_SKIP_CONFLICT_CHECK }} pip install galaxy-importer
 
       - name: Create galaxy-importer directory
         run: sudo mkdir -p /etc/galaxy-importer
