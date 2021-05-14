@@ -24,7 +24,7 @@ jobs:
         python-version: 3.8
 
     - name: Install ansible-base (v${{ matrix.ansible }})
-      run: pip install https://github.com/ansible/ansible/archive/v${{ matrix.ansible }}.tar.gz --disable- pip-version-check
+      run: pip install https://github.com/ansible/ansible/archive/v${{ matrix.ansible }}.tar.gz --disable-pip-version-check
 
     - name: Install coverage (v4.5.4)
       run: pip install coverage==4.5.4
