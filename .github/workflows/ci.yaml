@@ -35,7 +35,6 @@ jobs:
 
     - name: Install the collection tarball
       run: ansible-galaxy collection install .cache/collection-tarballs/*.tar.gz
-      working-directory: /home/runner/.ansible/collections/ansible_collections/amolopcito/alb
 
     - name: Run sanity test validate-modules
       run: ansible-test sanity --test validate-modules --docker -v --color --truncate 0 --coverage --python 3.8
