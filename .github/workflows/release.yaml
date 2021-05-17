@@ -2,7 +2,7 @@ name: Release collection to Ansible Galaxy
 on:
   release:
     types:
-      - created
+      - published
 jobs:
   deploy:
     runs-on: ubuntu-latest
