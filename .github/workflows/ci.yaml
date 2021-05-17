@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ANSIBLE_SKIP_CONFLICT_CHECK: 1
+      HOME: "/home/runner"
     strategy:
       matrix:
         ansible: [2.9.17, 2.10.5]
@@ -47,28 +48,22 @@ jobs:
     - name: Check errors
       run: if grep -E 'ERROR' ${GITHUB_WORKSPACE}/log.txt; then exit 1; else exit 0; fi
 
-    - name: Check Current working directory
-      run: echo $(HOME)
-
-    - name: Check Current files
-      run: echo echo $(ls -la $(HOME))
-
     - name: Run unit tests
       run: ansible-test units --docker -v --color --truncate 0 --python 3.8
-      working-directory: "/home/runner/.ansible/collections/ansible_collections/amolopcito/alb"
+      working-directory: ${HOME}/.ansible/collections/ansible_collections/amolopcito/alb
 
     - name: Run sanity test validate-modules
       run: ansible-test sanity --test validate-modules --docker -v --color --truncate 0 --python 3.8
-      working-directory: "${HOME}/.ansible/collections/ansible_collections/amolopcito/alb"
+      working-directory: ${HOME}/.ansible/collections/ansible_collections/amolopcito/alb
 
     - name: Run sanity test yamllint
       run: ansible-test sanity --test yamllint --docker -v --color --truncate 0 --python 3.8
-      working-directory: "${HOME}/.ansible/collections/ansible_collections/amolopcito/alb"
+      working-directory: ${HOME}/.ansible/collections/ansible_collections/amolopcito/alb
 
     - name: Run sanity test ansible-doc
       run: ansible-test sanity --test ansible-doc --docker -v --color --truncate 0 --python 3.8
-      working-directory: "${HOME}/.ansible/collections/ansible_collections/amolopcito/alb"
+      working-directory: ${HOME}/.ansible/collections/ansible_collections/amolopcito/alb
 
     - name: Run sanity test compile
       run: ansible-test sanity --test compile --docker -v --color --truncate 0 --python 3.8
-      working-directory: "${HOME}/.ansible/collections/ansible_collections/amolopcito/alb"
+      working-directory: ${HOME}/.ansible/collections/ansible_collections/amolopcito/alb
