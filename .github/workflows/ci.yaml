@@ -1,7 +1,6 @@
 name: Ansible CI
 on:
   - pull_request
-
 jobs:
   test:
     name: Test alb collection
@@ -26,6 +25,9 @@ jobs:
 
     - name: Install ansible-base (v${{ matrix.ansible }})
       run: pip install https://github.com/ansible/ansible/archive/v${{ matrix.ansible }}.tar.gz --disable-pip-version-check
+
+    - name: Get ansible version
+      run: echo $(ansible --version)
 
     - name: Build a collection tarball
       run: ansible-galaxy collection build
