@@ -31,7 +31,7 @@ jobs:
 
     - name: Install the collection tarball
       run: ansible-galaxy collection install amolopcito-alb*.tar.gz
-      working-directory: "${GITHUB_WORKSPACE}/.cache/collection-tarballs"
+      working-directory: ${GITHUB_WORKSPACE}/.cache/collection-tarballs
 
     - name: Install galaxy-importer
       run: ANSIBLE_SKIP_CONFLICT_CHECK=${{ env.ANSIBLE_SKIP_CONFLICT_CHECK }} pip install galaxy-importer
