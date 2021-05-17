@@ -27,11 +27,11 @@ jobs:
       run: pip install https://github.com/ansible/ansible/archive/v${{ matrix.ansible }}.tar.gz --disable-pip-version-check
 
     - name: Build a collection tarball
-      run: ansible-galaxy collection build --output-path "${GITHUB_WORKSPACE}/.cache/collection-tarballs"
+      run: ansible-galaxy collection build --output-path "${GITHUB_WORKSPACE}"
 
     - name: Install the collection tarball
       run: ansible-galaxy collection install amolopcito-alb*.tar.gz
-      working-directory: ${GITHUB_WORKSPACE}/.cache/collection-tarballs
+      working-directory: ${GITHUB_WORKSPACE}
 
     - name: Install galaxy-importer
       run: ANSIBLE_SKIP_CONFLICT_CHECK=${{ env.ANSIBLE_SKIP_CONFLICT_CHECK }} pip install galaxy-importer
@@ -43,10 +43,10 @@ jobs:
       run: sudo cp ${HOME}/.ansible/collections/ansible_collections/amolopcito/alb/.github/workflows/galaxy-importer.cfg /etc/galaxy-importer/galaxy-importer.cfg
 
     - name: Run galaxy-importer check
-      run: python -m galaxy_importer.main "${GITHUB_WORKSPACE}/.cache/collection-tarballs/amolopcito-*.tar.gz | tee "${GITHUB_WORKSPACE}/.cache/collection-tarballs/log.txt && sudo cp ./importer_result.json "${GITHUB_WORKSPACE}/.cache/collection-tarballs/importer_result.json
+      run: python -m galaxy_importer.main "${GITHUB_WORKSPACE}/amolopcito-*.tar.gz | tee "${GITHUB_WORKSPACE}/log.txt && sudo cp ./importer_result.json "${GITHUB_WORKSPACE}/importer_result.json
 
     - name: Check errors
-      run: if grep -E 'ERROR' "${GITHUB_WORKSPACE}/.cache/collection-tarballs/log.txt; then exit 1; else exit 0; fi
+      run: if grep -E 'ERROR' "${GITHUB_WORKSPACE}/log.txt; then exit 1; else exit 0; fi
 
     - name: Run unit tests
       run: ansible-test units --docker -v --color --truncate 0 --python 3.8
